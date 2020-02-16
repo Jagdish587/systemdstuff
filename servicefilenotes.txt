@@ -1,0 +1,43 @@
+To Create a Service :
+=====================
+(1) Create a service in path /etc/systemd/system
+
+To List all service files in Linux 
+===================================
+systemctl --type=service --all
+
+To Know status of service 
+============================
+sudo systemctl status pointless.service
+
+To enable a service 
+===================
+sudo systemctl enable pointless.service
+
+To disable a service 
+===================
+sudo systemctl disable pointless.service
+
+To Start a Service 
+===================
+sudo systemctl start pointless.service
+
+To Stop the service 
+====================
+sudo systemctl stop pointless.service
+
+To Restart a Service 
+===================
+sudo systemctl restart pointless.service
+
+To View journalctl logs
+=========================
+sudo journalctl -u pointless -f
+
+To Re-load a daemon
+====================
+systemctl daemon-reload
+
+To List Units
+============
+systemctl list-units

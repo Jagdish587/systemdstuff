@@ -1,0 +1,12 @@
+[Unit]
+Description = My Pointless Service
+After = network.target
+ConditionPathExists = /home/jagdish/systemd-examples/pointeless.sh
+
+[Service]
+ExecStart = /home/jagdish/systemd-examples/pointeless.sh
+ExecStop = /home/jagdish/systemd-examples/pointelessStop.sh
+Type = notify
+
+[Install]
+WantedBy = multi-user.target
